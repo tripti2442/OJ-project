@@ -9,15 +9,15 @@ import Signup from './components/Signup';
 function App() {
   const [token, setToken] = useState(null);
 
-  useEffect(() => {
-    const storedToken = localStorage.getItem('token');
+ /* useEffect(() => {
+    //const storedToken = localStorage.getItem('token');
     if (storedToken) {
       setToken(storedToken);
     }
-  }, []); 
+  }, []); */
 
   return (
-   
+   //private routes
     <Router>
        <div className="App">
     

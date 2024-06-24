@@ -1,7 +1,7 @@
 const User = require('../models/Users.js');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const cookieParser = require('cookie-parser');
+
 
 
 
@@ -15,7 +15,7 @@ const signup = async (req, res) => {
     }
     try {
         const hashedPassword= await bcrypt.hash(dataObj.password,10);
-        console.log(hashedPassword);
+        
         const existUser= await User.findOne({where:{
             email: dataObj.email
         }})
@@ -36,8 +36,10 @@ const signup = async (req, res) => {
            const options = {
             expires: new Date(Date.now() + 1 * 24 * 60 * 60 * 1000),
             httpOnly: true, 
+            sameSite: "None",
+            secure: true
            };
-         
+         console.log(token);
          res.cookie("token", token, options);
         
          res.status(200).json({
