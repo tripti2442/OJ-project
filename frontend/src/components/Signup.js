@@ -59,7 +59,7 @@ export default function Signup() {
                     setErrors(prev => ({ ...prev, email: data.message }));
                 } else {
                     console.log(data.token);
-                    localStorage.setItem("token", data.token);
+                    /*localStorage.setItem("token", data.token);*/
                     axios.defaults.headers.common['Authorization'] = `Bearer ${data.token}`;
                     if(data.token){
                         setSignupSuccess(true);
