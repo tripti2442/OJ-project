@@ -1,27 +1,23 @@
 const mongoose= require('mongoose');
 const userSchema = new mongoose.Schema({
-    name:{
-        type: String,
-       
-    },
-    phone:{
-        type: Number,
-      
-    },
-    email:{
+    admin_name:{
         type: String,
         
-
     },
-    password:{
+    problem_id:{
         type: String,
-     
+        
     },
-    role:{
+    input:{
         type: String,
+        
+    },
+    expectedOutput:{
+        type: String,
+        
 
     }
 
 });
 
-module.exports=mongoose.model('User',userSchema);
+module.exports=mongoose.model('Testcase',userSchema); 

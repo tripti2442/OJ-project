@@ -1,19 +1,19 @@
-.App {
+.Compiler {
   text-align: center;
 }
 
-.App-logo {
+.Compiler-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .Compiler-logo {
+    animation: Compiler-logo-spin infinite 20s linear;
   }
 }
 
-.App-header {
+.Compiler-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -24,15 +24,62 @@
   color: white;
 }
 
-.App-link {
+.Compiler-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+@keyframes Compiler-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
+}
+
+.Compiler {
+  text-align: center;
+}
+
+
+
+.controls {
+  margin: 20px;
+}
+
+.controls label {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.controls select {
+  font-size: 16px;
+  padding: 5px;
+}
+
+
+
+.code-editor textarea, .input-editor textarea {
+  width: 80%;
+ 
+  font-family: monospace;
+  font-size: 16px;
+}
+
+button {
+ 
+  font-size: 16px;
+}
+
+.output {
+ 
+  text-align: left;
+}
+
+.output pre {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border: 1px solid #ddd;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
