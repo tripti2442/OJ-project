@@ -17,7 +17,7 @@ function Compiler() {
   const [result, setResult] = useState('');
 
   useEffect(() => {
-    console.log("compiler mein hu mein");
+   
     const fetchTestcases = async () => {
       try {
         const response = await getTestcases(questionId);
