@@ -14,7 +14,7 @@ const login = async (req, res) => {
         dataObj.secretKey = req.body.secretKey;
     }
     try {
-     
+      
         if (dataObj.role === 'admin' && dataObj.secretKey !== process.env.ADMIN_KEY) {
             return res.status(401).json({ message: 'Incorrect Admin Key' });
         }

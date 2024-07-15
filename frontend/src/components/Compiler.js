@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import { getQuestion, getTestcases } from '../services/api';
 
 function Compiler() {
+  
   const { questionId } = useParams();
   const [code, setCode] = useState('');
   const [input, setInput] = useState('');
@@ -16,6 +17,7 @@ function Compiler() {
   const [result, setResult] = useState('');
 
   useEffect(() => {
+    console.log("compiler mein hu mein");
     const fetchTestcases = async () => {
       try {
         const response = await getTestcases(questionId);
