@@ -19,7 +19,12 @@ const login = async (req, res) => {
             return res.status(401).json({ message: 'Incorrect Admin Key' });
         }
 
-        const existUser = await User.findOne({ email: dataObj.email });
+        const existUser = await User.findOne(
+           
+            { email: dataObj.email ,
+              role: dataObj.role
+            }
+        );
 
         if (!existUser) {
             console.log("User not found for email:", dataObj.email);
